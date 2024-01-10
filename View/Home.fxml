@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@../application/application.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.HomeController">
+   <top>
+      <VBox prefHeight="23.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <MenuBar fx:id="menuBar">
+              <menus>
+                <Menu mnemonicParsing="false" text="Login">
+                  <items>
+                    <MenuItem mnemonicParsing="false" onAction="#custLogin" text="Customer" />
+                        <MenuItem mnemonicParsing="false" onAction="#dealerLogin" text="Dealer" />
+                        <MenuItem mnemonicParsing="false" onAction="#adminLogin" text="Admin" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Sign Up">
+                  <items>
+                    <MenuItem mnemonicParsing="false" onAction="#custSignup" text="Customer" />
+                        <MenuItem mnemonicParsing="false" onAction="#dealerSignup" text="Dealer" />
+                        <MenuItem mnemonicParsing="false" onAction="#adminSignup" text="Admin" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+         </children>
+      </VBox>
+   </top>
+   <center>
+      <ImageView fitHeight="342.0" fitWidth="590.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+         <image>
+            <Image url="file:/F:/Console%20Workspace/carDealershipManagementSystem/src/View/bg.jpg" />
+         </image>
+      </ImageView>
+   </center>
+</BorderPane>

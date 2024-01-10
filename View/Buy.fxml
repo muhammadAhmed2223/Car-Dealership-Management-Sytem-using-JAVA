@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@../application/application.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.BuyController">
+   <top>
+      <MenuBar fx:id="menuBar" BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="Back">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#goBack" text="Customer" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <left>
+      <VBox prefHeight="365.0" prefWidth="132.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label style="-fx-font-size: 36px;" text="Buy">
+               <VBox.margin>
+                  <Insets left="10.0" top="10.0" />
+               </VBox.margin>
+            </Label>
+            <Label text="Vehicle ID">
+               <VBox.margin>
+                  <Insets left="5.0" />
+               </VBox.margin>
+            </Label>
+            <TextField fx:id="vehicleID">
+               <VBox.margin>
+                  <Insets left="5.0" right="5.0" />
+               </VBox.margin>
+            </TextField>
+            <Label text="CCN">
+               <VBox.margin>
+                  <Insets left="5.0" top="10.0" />
+               </VBox.margin>
+            </Label>
+            <TextField fx:id="ccn">
+               <VBox.margin>
+                  <Insets left="4.0" right="4.0" />
+               </VBox.margin>
+            </TextField>
+            <Label fx:id="label1" text=" ">
+               <VBox.margin>
+                  <Insets left="5.0" top="10.0" />
+               </VBox.margin>
+            </Label>
+            <Button mnemonicParsing="false" onMouseClicked="#purhcase" text="Purchase">
+               <VBox.margin>
+                  <Insets left="15.0" top="20.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
+   </left>
+   <center>
+      <TableView fx:id="table_main" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn fx:id="table_id" prefWidth="30.0" text="ID" />
+          <TableColumn fx:id="table_regNo" prefWidth="55.0" text="RegNo" />
+            <TableColumn fx:id="table_company" prefWidth="56.0" text="Company" />
+            <TableColumn fx:id="table_model" prefWidth="56.0" text="Model" />
+            <TableColumn fx:id="table_type" prefWidth="48.0" text="Type" />
+            <TableColumn fx:id="table_price" prefWidth="83.0" text="Price" />
+            <TableColumn fx:id="table_year" prefWidth="51.0" text="Year" />
+            <TableColumn fx:id="table_color" prefWidth="61.0" text="Color" />
+        </columns>
+      </TableView>
+   </center>
+</BorderPane>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@../application/application.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.AdminVehiclesController">
+   <left>
+      <VBox prefHeight="365.0" prefWidth="48.0" BorderPane.alignment="CENTER" />
+   </left>
+   <top>
+      <MenuBar BorderPane.alignment="CENTER" fx:id="menuBar">
+        <menus>
+          <Menu mnemonicParsing="false" text="Back">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#goBack" text="Admin" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <center>
+      <TableView fx:id="mainTable" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn fx:id="table_id" prefWidth="29.0" text="ID" />
+          <TableColumn fx:id="table_regNo" prefWidth="47.0" text="RegNo" />
+            <TableColumn fx:id="table_company" prefWidth="61.0" text="Company" />
+            <TableColumn fx:id="table_model" prefWidth="48.0" text="Model" />
+            <TableColumn fx:id="table_type" prefWidth="45.0" text="Type" />
+            <TableColumn fx:id="table_price" prefWidth="38.0" text="Price" />
+            <TableColumn fx:id="table_year" prefWidth="42.0" text="Year" />
+            <TableColumn fx:id="table_color" prefWidth="46.0" text="Color" />
+            <TableColumn fx:id="table_rentPerDay" prefWidth="60.0" text="Rent/Day" />
+            <TableColumn fx:id="table_rented" prefWidth="45.0" text="Rented" />
+            <TableColumn fx:id="table_sold" prefWidth="28.0" text="Sold" />
+        </columns>
+      </TableView>
+   </center>
+</BorderPane>

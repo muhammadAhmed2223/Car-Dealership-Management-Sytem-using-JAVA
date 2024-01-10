@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@../application/application.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.AdminAdminController">
+   <left>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER" />
+   </left>
+   <top>
+      <MenuBar fx:id="menuBar" BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="Back">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#goBack" text="Admin" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <center>
+      <TableView fx:id="AdminAdminTable" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn fx:id="table_id" prefWidth="49.60003662109375" text="Id" />
+          <TableColumn fx:id="table_name" prefWidth="75.20001220703125" text="Name" />
+            <TableColumn fx:id="table_address" prefWidth="73.5999755859375" text="Address" />
+            <TableColumn fx:id="table_contact" prefWidth="64.800048828125" text="Contact" />
+            <TableColumn fx:id="table_cnic" prefWidth="63.99993896484375" text="CNIC" />
+            <TableColumn fx:id="table_email" minWidth="0.0" prefWidth="61.60003662109375" text="Email" />
+            <TableColumn fx:id="table_password" prefWidth="146.39996337890625" text="Password" />
+        </columns>
+      </TableView>
+   </center>
+</BorderPane>

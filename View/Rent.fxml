@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@../application/application.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.RentController">
+   <left>
+      <VBox prefHeight="400.0" prefWidth="134.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label style="-fx-font-size: 30px;" text="Rent">
+               <VBox.margin>
+                  <Insets left="10.0" top="10.0" />
+               </VBox.margin>
+            </Label>
+            <Label text="Vehicle ID">
+               <VBox.margin>
+                  <Insets left="10.0" top="10.0" />
+               </VBox.margin>
+            </Label>
+            <TextField fx:id="vehicleID">
+               <VBox.margin>
+                  <Insets left="5.0" right="5.0" />
+               </VBox.margin></TextField>
+            <Label text="CCN">
+               <VBox.margin>
+                  <Insets left="10.0" top="10.0" />
+               </VBox.margin>
+            </Label>
+            <TextField fx:id="ccn">
+               <VBox.margin>
+                  <Insets left="5.0" right="5.0" />
+               </VBox.margin></TextField>
+            <Label text="Number of Days">
+               <VBox.margin>
+                  <Insets left="5.0" top="10.0" />
+               </VBox.margin>
+            </Label>
+            <TextField fx:id="noDays">
+               <VBox.margin>
+                  <Insets left="5.0" right="5.0" />
+               </VBox.margin>
+            </TextField>
+            <Label fx:id="label1" text=" ">
+               <VBox.margin>
+                  <Insets left="5.0" top="10.0" />
+               </VBox.margin>
+            </Label>
+            <Button mnemonicParsing="false" onMouseClicked="#rent1" text="Rent">
+               <VBox.margin>
+                  <Insets left="30.0" top="40.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
+   </left>
+   <top>
+      <MenuBar fx:id="menuBar" BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="Back">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#goBack" text="Customer" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <center>
+      <TableView fx:id="table_main" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn fx:id="table_id" prefWidth="28.799986362457275" text="ID" />
+          <TableColumn fx:id="table_regNo" prefWidth="40.79998779296875" text="RegNo" />
+            <TableColumn fx:id="table_company" prefWidth="54.40003204345703" text="Company" />
+            <TableColumn fx:id="table_model" prefWidth="55.20001220703125" text="Model" />
+            <TableColumn fx:id="table_type" prefWidth="60.0" text="Type" />
+            <TableColumn fx:id="table_price" prefWidth="64.79998779296875" text="Price" />
+            <TableColumn fx:id="table_year" prefWidth="68.7999267578125" text="Year" />
+            <TableColumn fx:id="table_color" prefWidth="75.0" text="Color" />
+        </columns>
+      </TableView>
+   </center>
+</BorderPane>
